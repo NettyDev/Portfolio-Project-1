@@ -2,6 +2,7 @@ const path = require('path')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   entry: './src/index.tsx',
@@ -25,6 +26,7 @@ module.exports = {
             plugins: [
               '@babel/plugin-proposal-class-properties',
               '@babel/plugin-transform-runtime',
+              '@babel/plugin-syntax-dynamic-import',
             ],
           },
         },
@@ -40,6 +42,7 @@ module.exports = {
               '@babel/plugin-proposal-class-properties',
               '@babel/plugin-transform-typescript',
               '@babel/plugin-transform-runtime',
+              '@babel/plugin-syntax-dynamic-import',
             ],
           },
         },
@@ -71,6 +74,9 @@ module.exports = {
     ],
   },
   plugins: [
+    new CopyPlugin({
+      patterns: [{ from: 'assets/images/gallery', to: 'assets/gallery' }],
+    }),
     new HTMLWebpackPlugin({
       template: './src/index.html',
       title: 'React-Typescript-Boilerplate',

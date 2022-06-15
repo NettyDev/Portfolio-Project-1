@@ -1,6 +1,6 @@
-# React-Typescript-Boilerplate
+# Portfolio-Project-1
 
-This is my own React boilerplate writed in Typescript and used by me in my own projects.
+One of the old projects for the client. Converted so that it looks like an example.
 
 ## Available Scripts
 

@@ -1,0 +1,112 @@
+.contactGrid {
+  display: grid;
+  grid-template-columns: auto 485px 30px 485px auto;
+  @media screen and (max-width: 1050px) {
+    grid-template-columns: auto 30px auto;
+  }
+  @media screen and (max-width: 690px) {
+    display: block;
+    .contact-1 {
+      display: none;
+    }
+  }
+
+  .contact-1 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    @media screen and (max-width: 1050px) {
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
+  }
+
+  .contact-2 {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    @media screen and (max-width: 1050px) {
+      grid-column-start: 3;
+      grid-column-end: 4;
+    }
+    @media screen and (max-width: 690px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  div > .list-group {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin: 0;
+    > li {
+      @media screen and (max-width: 690px) {
+        text-align: center;
+        &.right {
+          text-align: center !important;
+        }
+      }
+
+      @media screen and (min-width: 690px) {
+        &.hidden {
+          display: none;
+        }
+        &:nth-child(3) {
+          border: 0;
+        }
+      }
+      list-style-type: disc;
+      position: relative;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+      background: transparent;
+      text-align: left;
+      display: block;
+      margin-bottom: -5px;
+      padding: 0.75rem 1.25rem;
+      &:last-child {
+        border: 0;
+      }
+
+      > h5 {
+        font-weight: bolder;
+        font-size: 1.25rem;
+        margin: 0 0 0.5rem 0;
+      }
+
+      > p {
+        font-weight: 300;
+        margin: 0;
+        font-size: 1.25rem;
+        > a {
+          font-weight: 300;
+          text-decoration: none;
+          color: #343a40;
+        }
+        > b {
+          font-weight: bolder;
+        }
+      }
+      &.right {
+        text-align: right;
+      }
+    }
+  }
+}
+
+.map-grid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: auto 1000px auto;
+  @media screen and (max-width: 1135px) {
+    display: block;
+  }
+  .map {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    iframe {
+      height: 400px;
+      width: 100%;
+    }
+  }
+}
