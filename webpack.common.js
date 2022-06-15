@@ -79,7 +79,7 @@ module.exports = {
     }),
     new HTMLWebpackPlugin({
       template: './src/index.html',
-      title: 'React-Typescript-Boilerplate',
+      title: 'Portfolio-Project-1',
       minify: 'auto',
       meta: {
         description: '',
@@ -101,8 +101,8 @@ module.exports = {
       inject: true,
       prefix: 'assets/favicons/',
       favicons: {
-        appName: 'React-Typescript-Boilerplate',
-        appDescription: 'Boilerplate for React and Typescript',
+        appName: 'Portfolio-Project-1',
+        appDescription: 'Portfolio Project 1',
         developerName: 'NettyDev',
         developerURL: 'https://nettydev.xyz',
         background: '#000',
